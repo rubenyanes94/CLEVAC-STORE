@@ -1,7 +1,7 @@
 // src/components/ProductList.jsx
 import React from 'react';
-import { products } from '../data/store'; // Importamos la data
-import { ProductCard } from './ProductCard'; // Importamos la tarjeta
+import { products } from '../data/store';
+import { ProductCard } from './ProductCard'; 
 
 export const ProductList = () => {
   return (

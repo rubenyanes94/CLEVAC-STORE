@@ -5,14 +5,11 @@ import { ProductList } from './components/ProductList';
 function App() {
   return (
     <div>
-      {/* --- PROMO BAR --- */}
       <div className="promo-bar">
         <div className="container">
           ENVÍO GRATIS A TODO EL PAÍS EN PEDIDOS +$50 | <a href="#ropa">COMPRAR AHORA</a>
         </div>
       </div>
-
-      {/* --- NAVBAR --- */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
         <div className="container">
           <a className="navbar-brand fw-bold fs-3" href="#">CLEVAC</a>
@@ -30,15 +27,11 @@ function App() {
               <a href="#" className="me-3 text-dark fs-5"><i className="fa-solid fa-magnifying-glass"></i></a>
               <a href="#" className="me-3 text-dark fs-5"><i className="fa-regular fa-user"></i></a>
               <a href="#" className="text-dark fs-5 position-relative">
-                <i className="fa-solid fa-bag-shopping"></i>
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{ fontSize: '0.6rem' }}>2</span>
               </a>
             </div>
           </div>
         </div>
       </nav>
-
-      {/* --- HERO --- */}
       <header className="clevac-hero">
         <div className="container">
           <div className="row align-items-center">
@@ -56,8 +49,7 @@ function App() {
               </div>
             </div>
             <div className="col-lg-6 d-none d-lg-block">
-              {/* Imagen Hero - Asegúrate de tener esta imagen o cambiar la URL */}
-              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              <img src="clevac-store.jpeg"
                 className="img-fluid rounded shadow-lg animate__animated animate__fadeInRight"
                 style={{ maxHeight: '500px', width: '100%', objectFit: 'cover' }}
                 alt="Hombre con ropa de moda CLEVAC" />
@@ -217,25 +209,6 @@ function App() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* --- NEWSLETTER (NUEVO) --- */}
-      <section className="newsletter-section text-center">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-6">
-              <h3 className="fw-bold mb-3">Únete al Club CLEVAC</h3>
-              <p className="text-muted mb-4">Recibe un 10% de descuento en tu primera compra y acceso exclusivo a nuevas colecciones.</p>
-              <form action="#">
-                <div className="input-group mb-3">
-                  <input type="email" className="form-control newsletter-input" placeholder="Tu correo electrónico" aria-label="Tu correo electrónico" />
-                  <button className="btn btn-subscribe" type="button">SUSCRIBIRSE</button>
-                </div>
-              </form>
-              <small className="text-muted">Respetamos tu privacidad. Sin spam, solo estilo.</small>
-            </div>
-          </div>
         </div>
       </section>
 
