@@ -63,19 +63,19 @@ function App() {
         <div className="row g-4">
           <div className="col-md-4">
             <div className="category-card animate__animated animate__fadeIn">
-              <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hombres" />
+              <img src="clevac-chaqueta.jpeg" alt="Hombres" />
               <div className="category-overlay"><span className="category-title">Hombres</span></div>
             </div>
           </div>
           <div className="col-md-4">
             <div className="category-card animate__animated animate__fadeIn animate__delay-1s">
-              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mujeres" />
+              <img src="clevac-camisa.jpeg" alt="Mujeres" />
               <div className="category-overlay"><span className="category-title">Mujeres</span></div>
             </div>
           </div>
           <div className="col-md-4">
             <div className="category-card animate__animated animate__fadeIn animate__delay-2s">
-              <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Accesorios" />
+              <img src="clevac-franela.jpeg" alt="Accesorios" />
               <div className="category-overlay"><span className="category-title">Accesorios</span></div>
             </div>
           </div>
@@ -237,7 +237,6 @@ function App() {
                 <li className="nav-item"><a href="#faq" className="nav-link">FAQs</a></li>
                 <li className="nav-item"><a href="#" className="nav-link">Contáctanos</a></li>
                 <li className="nav-item"><a href="#" className="nav-link">Política de Privacidad</a></li>
-                <li className="nav-item"><a href="#" className="nav-link">Términos de Servicio</a></li>
               </ul>
             </div>
 

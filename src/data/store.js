@@ -10,8 +10,8 @@ export const products = [
     {
         id: 2,
         name: "CLEVAC Pro Shades",
-        price: 129.99,
-        originalPrice: 150.00,
+        price: 39.99,
+        originalPrice: 60.00,
         image: "clevac-store-2.jpeg",
         category: "accesorios"
     },

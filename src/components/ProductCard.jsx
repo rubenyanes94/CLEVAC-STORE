@@ -19,7 +19,7 @@ export const ProductCard = ({ product }) => {
           <p className="card-text text-danger fw-bold fs-5">
             ${product.price}
           </p>
-          <button className="btn btn-buy">Añadir al Carrito</button>
+          <button className="btn btn-buy">Comprar</button>
         </div>
       </div>
     </div>
