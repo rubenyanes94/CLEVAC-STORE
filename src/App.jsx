@@ -7,7 +7,7 @@ function App() {
     <div>
       <div className="promo-bar">
         <div className="container">
-          ENVÍO GRATIS A TODO EL PAÍS EN PEDIDOS +$50 | <a href="#ropa">COMPRAR AHORA</a>
+          ENVÍO A TODO EL PAÍS | <a href="#ropa">COMPRAR AHORA</a>
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
