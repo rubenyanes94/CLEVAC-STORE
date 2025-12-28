@@ -1,8 +1,15 @@
 // src/App.jsx
 import React from 'react';
+import { useState } from 'react';
+import { Route } from 'react-router-dom';
 import { ProductList } from './components/ProductList';
+import { NavBar } from './components/NavBar';
+import { Hero } from './components/Hero';
 
 function App() {
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    
   return (
     <div>
       <div className="promo-bar">
@@ -10,55 +17,8 @@ function App() {
           ENVÍO A TODO EL PAÍS | <a href="#ropa">COMPRAR AHORA</a>
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
-        <div className="container">
-          <a className="navbar-brand fw-bold fs-3" href="#">CLEVAC</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
-              <li className="nav-item px-2"><a className="nav-link active" href="#">Inicio</a></li>
-              <li className="nav-item px-2"><a className="nav-link" href="#categorias">Colecciones</a></li>
-              <li className="nav-item px-2"><a className="nav-link" href="#ropa">Más Vendidos</a></li>
-              <li className="nav-item px-2"><a className="nav-link" href="#faq">FAQ</a></li>
-            </ul>
-            <div className="d-flex">
-              <a href="#" className="me-3 text-dark fs-5"><i className="fa-solid fa-magnifying-glass"></i></a>
-              <a href="#" className="me-3 text-dark fs-5"><i className="fa-regular fa-user"></i></a>
-              <a href="#" className="text-dark fs-5 position-relative">
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <header className="clevac-hero">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <p className="text-uppercase fw-bold small text-muted mb-2">4,9/5 Estrellas | 10.000+ Clientes Satisfechos</p>
-              <h1 className="animate__animated animate__fadeInDown mb-3">
-                Viste <span className="text-primary">Tu Esencia</span>.<br />Siente Tu Estilo.
-              </h1>
-              <p className="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">
-                Descubre colecciones que combinan diseño vanguardista, calidad premium y confort insuperable para tu día a día.
-              </p>
-              <div className="d-flex gap-3">
-                <a href="#ropa" className="btn btn-lg btn-primary animate__animated animate__zoomIn">Explorar Ropa</a>
-                <a href="#lentes" className="btn btn-lg btn-outline-secondary animate__animated animate__zoomIn animate__delay-1s">Ver Lentes</a>
-              </div>
-            </div>
-            <div className="col-lg-6 d-none d-lg-block">
-              <img src="clevac-store.jpeg"
-                className="img-fluid rounded shadow-lg animate__animated animate__fadeInRight"
-                style={{ maxHeight: '500px', width: '100%', objectFit: 'cover' }}
-                alt="Hombre con ropa de moda CLEVAC" />
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* --- CATEGORÍAS --- */}
+      <NavBar setCategory={setSelectedCategory} />
+      <Hero />
       <section className="container my-5" id="categorias">
         <div className="row g-4">
           <div className="col-md-4">
@@ -82,7 +42,8 @@ function App() {
         </div>
       </section>
 
-      {/* --- TESTIMONIOS (Trusted Listeners) --- */}
+      <ProductList selectedCategory={selectedCategory} />
+
       <section className="trusted-listeners border-top border-bottom">
         <div className="container">
             <h4 className="fw-bold mb-4">Amado por Influencers y Clientes</h4>
@@ -113,7 +74,6 @@ function App() {
         </div>
       </section>
 
-      {/* --- FEATURES --- */}
       <section className="features-section container my-5 py-5">
         <h2 className="text-center fw-bold mb-5">¿Por Qué Elegir CLEVAC?</h2>
         <div className="row">
@@ -135,7 +95,6 @@ function App() {
         </div>
       </section>
 
-      {/* --- HISTORIA (NUEVO) --- */}
       <section className="container-fluid py-5 bg-light mb-5">
         <div className="container">
           <div className="row align-items-center">
@@ -157,10 +116,6 @@ function App() {
         </div>
       </section>
 
-      {/* --- LISTA DE PRODUCTOS (Desde store.js) --- */}
-      <ProductList />
-
-      {/* --- FAQ (NUEVO) --- */}
       <section className="container my-5 pt-5" id="faq">
         <h2 className="text-center fw-bold mb-4">Preguntas Frecuentes</h2>
         <div className="accordion accordion-flush mx-auto" id="faqAccordion" style={{ maxWidth: '800px' }}>
@@ -212,7 +167,6 @@ function App() {
         </div>
       </section>
 
-      {/* --- FOOTER (NUEVO) --- */}
       <footer className="clevac-footer">
         <div className="container">
           <div className="row">
