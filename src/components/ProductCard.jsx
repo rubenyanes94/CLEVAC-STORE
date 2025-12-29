@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const ProductCard = ({ product }) => {
+export const ProductCard = ({ product,setViewedProduct }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const hasDiscount = product.originalPrice && product.originalPrice > product.price;
 
@@ -18,19 +18,22 @@ export const ProductCard = ({ product }) => {
           {hasDiscount && (
             <span className="badge-promo">OFERTA</span>
           )}
-          <img 
-            src={product.image} 
+          <img
+            src={product.image}
             className="card-img-top transition-image"
-            alt={product.name} 
+            alt={product.name}
             style={{ height: '380px', objectFit: 'cover' }}
           />
           <div className="product-overlay">
-             <button className="btn btn-dark btn-quick-add mb-2" onClick={handleWhatsAppClick}>
-                <i className="fa-brands fa-whatsapp me-2"></i>Comprar Ahora
-             </button>
-             <button className="btn btn-outline-dark btn-view-more bg-white">
-                Ver Detalle
-             </button>
+            <button className="btn btn-dark btn-quick-add mb-2" onClick={handleWhatsAppClick}>
+              <i className="fa-brands fa-whatsapp me-2"></i>Comprar Ahora
+            </button>
+            <button
+              className="btn btn-outline-dark btn-view-more bg-white"
+              onClick={() => setViewedProduct(product)}
+            >
+              Ver Detalle
+            </button>
           </div>
         </div>
         <div className="card-body px-3 py-4">
@@ -46,7 +49,7 @@ export const ProductCard = ({ product }) => {
               <span className="price-new d-block">${product.price}</span>
             </div>
           </div>
-          
+
           <p className="product-description-short">{product.description}</p>
 
           <div className="d-flex gap-2 mt-3 mb-3">
@@ -57,11 +60,11 @@ export const ProductCard = ({ product }) => {
 
           <div className="d-flex align-items-center justify-content-between pt-2 border-top">
             <span className={`stock-indicator ${product.stock < 10 ? 'low-stock' : ''}`}>
-               {product.stock < 10 ? `¡Solo ${product.stock} piezas!` : 'En Stock'}
+              {product.stock < 10 ? `¡Solo ${product.stock} piezas!` : 'En Stock'}
             </span>
             <div className="rating-stars">
-                <i className="fa-solid fa-star text-warning small"></i>
-                <span className="ms-1 small fw-bold">4.8</span>
+              <i className="fa-solid fa-star text-warning small"></i>
+              <span className="ms-1 small fw-bold">4.8</span>
             </div>
           </div>
         </div>

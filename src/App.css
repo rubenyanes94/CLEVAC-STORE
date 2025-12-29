@@ -360,3 +360,33 @@
     bottom: 0;
 }
 
+.btn-size-selector {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #eee;
+    background: white;
+    font-weight: bold;
+    transition: all 0.2s;
+    border-radius: 8px;
+}
+
+.btn-size-selector:hover {
+    border-color: #000;
+}
+
+.btn-size-selector.active {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+    transform: scale(1.1);
+}
+
+.modal.show {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

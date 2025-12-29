@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export const ProductList = ({ selectedCategory = 'all' }) => {
+export const ProductList = ({ selectedCategory = 'all', setViewedProduct }) => {
   const filteredProducts = selectedCategory === 'all' 
     ? products 
     : products.filter(item => item.category === selectedCategory);
@@ -42,7 +42,7 @@ export const ProductList = ({ selectedCategory = 'all' }) => {
             >
                 {filteredProducts.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <ProductCard product={item} isCarousel={true} />
+                        <ProductCard product={item} isCarousel={true} setViewedProduct={setViewedProduct} />
                     </SwiperSlide>
                 ))}
             </Swiper>

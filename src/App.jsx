@@ -5,10 +5,12 @@ import { Route } from 'react-router-dom';
 import { ProductList } from './components/ProductList';
 import { NavBar } from './components/NavBar';
 import { Hero } from './components/Hero';
+import { QuickViewModal } from './components/QuickViewModal';
 
 function App() {
 
     const [selectedCategory, setSelectedCategory] = useState('all');
+    const [viewedProduct, setViewedProduct] = useState(null);
 
   return (
     <div>
@@ -45,7 +47,7 @@ function App() {
         </section>
       </>
       )}
-      <ProductList selectedCategory={selectedCategory} />
+      <ProductList selectedCategory={selectedCategory} setViewedProduct={setViewedProduct} />
 
       <section className="trusted-listeners border-top border-bottom">
         <div className="container">
@@ -169,6 +171,11 @@ function App() {
 
         </div>
       </section>
+
+      <QuickViewModal 
+        product={viewedProduct} 
+        onClose={() => setViewedProduct(null)} 
+      />
 
       <footer className="clevac-footer">
         <div className="container">
