@@ -64,7 +64,7 @@ export const products = [
         category: "lentes",
         image: "CLEVAC-LENTES-1.jpeg",
         stock: 8,
-        description: "Protección UV de alto rendimiento y diseño minimalista para acompañarte en cada una de tus aventuras."
+        description: "Lentes de alta resistencia con tecnología de filtrado solar para una visión nítida y segura en cualquier entorno."
     },
 
     {
@@ -75,7 +75,7 @@ export const products = [
         category: "lentes",
         image: "CLEVAC-LENTES-2.jpeg",
         stock: 8,
-        description: "Protección UV de alto rendimiento y diseño minimalista para acompañarte en cada una de tus aventuras."
+        description: "Lentes de alta resistencia con tecnología de filtrado solar para una visión nítida y segura en cualquier entorno."
     },
 
     {
@@ -86,7 +86,7 @@ export const products = [
         category: "lentes",
         image: "CLEVAC-LENTES-3.jpeg",
         stock: 8,
-        description: "Protección UV de alto rendimiento y diseño minimalista para acompañarte en cada una de tus aventuras."
+        description: "Lentes de alta resistencia con tecnología de filtrado solar para una visión nítida y segura en cualquier entorno."
     },
     // Aquí puedes agregar 100 productos más y React los renderizará automáticamente
 ];
