@@ -54,7 +54,6 @@ export const NavBar = ({ setCategory, cartCount = 0 }) => {
 
             <div className="d-flex align-items-center">
                 <a href="#" className="me-3 text-dark fs-5"><i className="fa-solid fa-magnifying-glass"></i></a>
-                <a href="#" className="me-3 text-dark fs-5"><i className="fa-regular fa-user"></i></a>
 
                 <a href="#" className="text-dark fs-5 position-relative">
                     <i className="fa-solid fa-bag-shopping"></i>

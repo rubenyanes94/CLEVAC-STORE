@@ -11,7 +11,7 @@ export const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="col-md-6 col-lg-4 mb-4">
+    <div className="mb-4">
       <div className="card h-100 border-0 shadow-sm product-card-hover">
         <div className="position-relative overflow-hidden group">
 
