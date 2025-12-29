@@ -199,3 +199,55 @@
  .clevac-footer .social-icons {
    font-size: 1.5rem;
  }
+
+ /* Efecto de elevación y zoom */
+.product-card-hover {
+    transition: transform 0.3s ease, shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
+}
+
+.transition-image {
+    transition: transform 0.5s ease;
+}
+
+.product-card-hover:hover .transition-image {
+    transform: scale(1.05);
+}
+
+/* Estilo para las tallas */
+.size-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #6c757d;
+    background: #f8f9fa;
+    transition: all 0.2s;
+}
+
+.size-badge:hover {
+    background: #212529;
+    color: white;
+    border-color: #212529;
+}
+
+/* Overlay de botón rápido */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card-hover:hover .product-overlay {
+    opacity: 1;
+}
