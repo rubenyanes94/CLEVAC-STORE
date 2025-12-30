@@ -488,7 +488,6 @@
     line-height: 1.6;
 }
 
-/* --- BADGE NUEVA COLECCIÓN --- */
 .badge-new-collection {
     display: inline-flex;
     align-items: center;
@@ -511,7 +510,6 @@
     animation: pulse 2s infinite;
 }
 
-/* --- BOTONES CUSTOM --- */
 .btn-clevac-main {
     background: #000;
     color: #fff;
@@ -541,7 +539,6 @@
     background: #f8f9fa;
 }
 
-/* --- MEDIA CONTAINER --- */
 .hero-media-container {
     position: relative;
     padding: 20px;
@@ -552,11 +549,9 @@
     height: 600px;
     object-fit: cover;
     border-radius: 40px;
-    /* Corte asimétrico moderno */
     border-top-left-radius: 150px; 
 }
 
-/* --- FLOATING CARD --- */
 .floating-info-card {
     position: absolute;
     bottom: 50px;
@@ -582,7 +577,6 @@
     font-size: 1.2rem;
 }
 
-/* --- DECORATIONS --- */
 .bg-decoration-blob {
     position: absolute;
     width: 400px;
@@ -605,3 +599,4 @@
     .img-hero-curved { height: 400px; border-top-left-radius: 40px; }
     .floating-info-card { left: 20px; bottom: 20px; }
 }
+

@@ -14,11 +14,11 @@ export const Hero = () => {
           <div className="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
             <div className="badge-new-collection animate__animated animate__fadeIn mb-4">
               <span className="dot-indicator"></span>
-              Nueva Colección 2025 disponible
+              Disponibilidad Inmediata 
             </div>
         
             <h1 className="hero-title animate__animated animate__fadeInDown mb-3">
-              CLEVAC - Define <span className="fw-black">Tu Propio</span> <br /> 
+              Define <span className="fw-black">Tu Propio</span> <br /> 
               Estándar.
             </h1>
             <p className="hero-subtitle mb-5 animate__animated animate__fadeInUp">
