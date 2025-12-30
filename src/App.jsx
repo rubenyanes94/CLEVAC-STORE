@@ -15,6 +15,7 @@ import { SearchPage } from './components/SearchPage';
 function App() {
   const [viewedProduct, setViewedProduct] = useState(null);
 
+
   return (
     <div>
       <div className="promo-bar">
@@ -22,7 +23,7 @@ function App() {
           ENVÍO A TODO EL PAÍS | <a href="#ropa">COMPRAR AHORA</a>
         </div>
       </div>
-      <NavBar />
+      <NavBar/>
       <Routes>
         <Route path="/" element={
           <>

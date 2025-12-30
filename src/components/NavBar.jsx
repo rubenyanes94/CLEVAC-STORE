@@ -20,8 +20,8 @@ export const NavBar = ({ cartCount = 0 }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
       <div className="container">
-        {/* Logo de la tienda */}
         <Link className="navbar-brand fw-bold fs-3" to="/" style={{ letterSpacing: '1px' }}>
+        <img src="CLEVAC-LOGO.jpg" alt="CLEVAC Logo" style={{ height: '40px', marginRight: '10px' }} />
           CLEVAC
         </Link>
         <button 
@@ -67,19 +67,8 @@ export const NavBar = ({ cartCount = 0 }) => {
             </button>
           </form>
 
-          {/* ICONO DE CARRITO */}
           <div className="d-flex align-items-center justify-content-center">
-            <button className="btn p-0 position-relative border-0 bg-transparent">
-              <i className="fa-solid fa-cart-shopping fs-5"></i>
-              {cartCount > 0 && (
-                <span 
-                  className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
-                  style={{ fontSize: '0.6rem', padding: '0.35em 0.6em' }}
-                >
-                  {cartCount}
-                </span>
-              )}
-            </button>
+           
           </div>
         </div>
       </div>
