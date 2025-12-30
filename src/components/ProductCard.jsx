@@ -4,7 +4,6 @@ export const ProductCard = ({ product,setViewedProduct }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const hasDiscount = product.originalPrice && product.originalPrice > product.price;
 
-  // Función para redirigir a WhatsApp
   const handleWhatsAppClick = () => {
     const message = `Hola CLEVAC! Me interesa el producto: ${product.name}. ¿Tienen disponibilidad?`;
     window.open(`https://wa.me/584120000000?text=${encodeURIComponent(message)}`, '_blank');

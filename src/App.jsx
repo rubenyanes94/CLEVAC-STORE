@@ -6,6 +6,7 @@ import { ProductList } from './components/ProductList';
 import { NavBar } from './components/NavBar';
 import { Hero } from './components/Hero';
 import { QuickViewModal } from './components/QuickViewModal';
+import { Categories } from './components/Categories';
 
 function App() {
 
@@ -23,35 +24,14 @@ function App() {
       {selectedCategory === 'all' && (
       <>
         <Hero />
-        <section className="container my-5" id="categorias">
-          <div className="row g-4">
-            <div className="col-md-4">
-              <div className="category-card animate__animated animate__fadeIn">
-                <img src="clevac-chaqueta.jpeg" alt="Hombres" />
-                <div className="category-overlay"><span className="category-title">Hombres</span></div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="category-card animate__animated animate__fadeIn animate__delay-1s">
-                <img src="clevac-camisa.jpeg" alt="Mujeres" />
-                <div className="category-overlay"><span className="category-title">Mujeres</span></div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="category-card animate__animated animate__fadeIn animate__delay-2s">
-                <img src="clevac-franela.jpeg" alt="Accesorios" />
-                <div className="category-overlay"><span className="category-title">Accesorios</span></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Categories/>
       </>
       )}
       <ProductList selectedCategory={selectedCategory} setViewedProduct={setViewedProduct} />
 
       <section className="trusted-listeners border-top border-bottom">
         <div className="container">
-            <h4 className="fw-bold mb-4">Amado por Influencers y Clientes</h4>
+            <h4 className="fw-bold mb-4">Amado por los Clientes</h4>
             <p className="text-muted">De profesionales a viajeros, miles confían en la calidad de CLEVAC.</p>
             <div className="row justify-content-center mt-4" id="testimonials">
                 <div className="col-md-4 mb-3">
