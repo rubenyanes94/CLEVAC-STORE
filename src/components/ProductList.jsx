@@ -6,18 +6,20 @@ import { Navigation, Pagination, Mousewheel, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { useParams } from 'react-router-dom';
 
-export const ProductList = ({ selectedCategory = 'all', setViewedProduct }) => {
-  const filteredProducts = selectedCategory === 'all' 
+export const ProductList = ({ setViewedProduct, title, category }) => {
+  const { categoryName } = useParams();
+  const currentCategory = categoryName || category || 'all';
+
+  const filteredProducts = currentCategory === 'all' 
     ? products 
-    : products.filter(item => item.category === selectedCategory);
+    : products.filter(item => item.category === currentCategory);
 
   return (
-    <section className="container my-5" id="ropa">
-        <h2 className="text-center fw-bold mb-5">
-            {selectedCategory === 'all' 
-              ? 'Nuestros Favoritos, Pensados para Ti' 
-              : `Colección: ${selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)}`}
+    <section className="container my-5">
+        <h2 className="text-center fw-bold mb-5 text-uppercase">
+            {currentCategory === 'all' ? title : `Colección ${currentCategory}`}
         </h2>
         
         {filteredProducts.length > 0 ? (
