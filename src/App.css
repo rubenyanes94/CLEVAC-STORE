@@ -423,3 +423,185 @@
     outline: none !important;
     box-shadow: none !important;
 }
+
+/* --- HERO LAYOUT --- */
+.hero-innovative {
+    background-color: #ffffff;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.fw-black { font-weight: 900 !important; }
+
+/* --- BOTONES PREMIUM --- */
+.btn-clevac-dark {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-clevac-dark:hover {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+.btn-clevac-outline {
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: 12px 35px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-clevac-outline:hover {
+    background: #f8f9fa;
+}
+
+/* --- HERO STYLES --- */
+.hero-premium {
+    background-color: #ffffff;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    color: #1a1a1a;
+    letter-spacing: -2px;
+}
+
+.fw-black { font-weight: 900 !important; }
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #666;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* --- BADGE NUEVA COLECCIÓN --- */
+.badge-new-collection {
+    display: inline-flex;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.dot-indicator {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+    animation: pulse 2s infinite;
+}
+
+/* --- BOTONES CUSTOM --- */
+.btn-clevac-main {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-clevac-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.btn-clevac-secondary {
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+    padding: 12px 35px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-clevac-secondary:hover {
+    background: #f8f9fa;
+}
+
+/* --- MEDIA CONTAINER --- */
+.hero-media-container {
+    position: relative;
+    padding: 20px;
+}
+
+.img-hero-curved {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 40px;
+    /* Corte asimétrico moderno */
+    border-top-left-radius: 150px; 
+}
+
+/* --- FLOATING CARD --- */
+.floating-info-card {
+    position: absolute;
+    bottom: 50px;
+    left: -20px;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-wrapper-express {
+    background: #f0fdf4;
+    color: #16a34a;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.2rem;
+}
+
+/* --- DECORATIONS --- */
+.bg-decoration-blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(255,255,255,0) 70%);
+    filter: blur(50px);
+    z-index: 0;
+}
+
+.top-right { top: -100px; right: -100px; }
+.bottom-left { bottom: -100px; left: -100px; }
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(0.95); opacity: 1; }
+}
+
+@media (max-width: 991px) {
+    .img-hero-curved { height: 400px; border-top-left-radius: 40px; }
+    .floating-info-card { left: 20px; bottom: 20px; }
+}
