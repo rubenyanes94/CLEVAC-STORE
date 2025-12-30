@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom'; // Importamos componentes de ruta
+import { Routes, Route } from 'react-router-dom'; 
 import { ProductList } from './components/ProductList';
 import { NavBar } from './components/NavBar';
 import { Hero } from './components/Hero';
@@ -10,6 +10,7 @@ import { Choose } from './components/Choose';
 import { AboutUs } from './components/AboutUs';
 import { Qa } from './components/Qa';
 import { Footer } from './components/Footer';
+import { SearchPage } from './components/SearchPage';
 
 function App() {
   const [viewedProduct, setViewedProduct] = useState(null);
@@ -34,6 +35,8 @@ function App() {
             <Qa />
           </>
         } />
+
+        <Route path="/search" element={<SearchPage setViewedProduct={setViewedProduct} />} />
 
         <Route path="/categoria/:categoryName" element={
           <div className="pt-5 mt-5"> 

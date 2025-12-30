@@ -390,3 +390,36 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
+.search-navbar input {
+    transition: all 0.3s ease;
+    border: 1px solid transparent !important;
+}
+
+.search-navbar input:focus {
+    width: 250px !important; /* Se expande un poco al hacer clic */
+    background-color: #fff !important;
+    border-color: #eee !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+}
+
+.badge-cart {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #000;
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.form-control:focus {
+    background-color: #fff !important;
+    border: 1px solid #eee !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
